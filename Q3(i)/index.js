@@ -1,7 +1,5 @@
 const express = require("express");
 const axios = require("axios");
-
-
 const app = express();
 const PORT = 8000;
 
@@ -26,8 +24,6 @@ app.get("/students", async (req, res) => {
   }
 });
 
-
-
 app.get("/students/:gender", async (req, res) => {
   try {
     const response = await fetch("https://freetestapi.com/api/v1/students");
@@ -50,6 +46,3 @@ app.get("/students/:gender", async (req, res) => {
     res.status(500).send("Error fetching data from the API");
   }
 });
-
-
-
